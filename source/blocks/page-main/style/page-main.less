@@ -1,0 +1,33 @@
+.page-main {
+  padding-top: calc(50vh - 170px);
+}
+
+.page-main__skills,
+.page-main__projects,
+.page-main__contacts {
+  margin-bottom: 50px;
+
+  & .hover-headline {
+    opacity: 0;
+    transition: 1s;
+  }
+
+  &:hover {
+    .hover-headline {
+      opacity: 1;
+      transition: 2s;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .page-main {
+    padding-top: calc(50vh - 250px);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-main {
+    padding-top: 50px;
+  }
+}
