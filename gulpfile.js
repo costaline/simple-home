@@ -105,15 +105,16 @@ function watch() {
 
 function cleanghub() {
   return del([
-    "/home/constantine/Документы/GitHub/costaline.github.io/*",
-    "!/home/constantine/Документы/GitHub/costaline.github.io/projects",
-    "!/home/constantine/Документы/GitHub/costaline.github.io/.git"
+    "../costaline.github.io/*",
+    "!../costaline.github.io/projects",
+    "!../costaline.github.io/.git"
   ], { force: true });
 }
 
 function copyghub() {
   return gulp.src("build/**")
-    .pipe(gulp.dest("/home/constantine/Документы/GitHub/costaline.github.io"));
+    // .pipe(gulp.dest("/home/constantine/Документы/GitHub/costaline.github.io"));
+    .pipe(gulp.dest("../costaline.github.io/"));
 }
 
 // complex tasks
